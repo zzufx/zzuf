@@ -39,7 +39,7 @@
         <effect amplifier="255" duration="3s">resistance</effect>
 	<effect amplifier="255" duration="3s">fire resistance</effect>
         <effect amplifier="4" duration="oo">jump_boost</effect> 
-	<effect amplifier="-5" duration="oo">health boost</effect>
+	<effect amplifier="-4" duration="oo">health boost</effect>
     </kit>
 </kits>
 <regions>
