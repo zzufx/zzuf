@@ -31,7 +31,7 @@
     </default>
 </spawns>
 <kits>
-    <kit id="players-kit">
+    <kit id="players-kit" force="true">
         <clear/>
         <item slot="0" amount="16" material="cactus"/>
         <item slot="1" amount="2" damage="13" material="carpet"/>
@@ -40,6 +40,7 @@
         <effect amplifier="255" duration="3s">fire resistance</effect>
         <effect amplifier="4" duration="oo">jump_boost</effect> 
         <effect amplifier="-4" duration="oo">health boost</effect>
+        <health>1</health>
     </kit>
 </kits>
 <regions>
