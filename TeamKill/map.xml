@@ -4,7 +4,7 @@
 <objective>Get points from eliminating other players before the time is up or everyone is dead!</objective>
 <authors>
     <author uuid="dd8c3d79-3930-41f6-a815-621dc3d52649" contribution="Map Concept"/> <!-- StanleyTheCow -->
-    <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128" contribution="Aesthethics and XML"/> <!-- zzuf -->
+    <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128" contribution="Map Packaging, Aesthethics and XML"/> <!-- zzuf -->
 </authors>
 <contributors>
     <contributor uuid="73711d58-d786-4007-8c95-c93b1311de1a" contribution="Spaceship Battles Author"/> <!-- Oversoul96 -->
