@@ -9,7 +9,7 @@
     <author uuid="654a9fe7-c75c-4b45-91df-8d48c4a5e072"/> <!-- Flamiix -->
 </authors>
 <contributors> 
-    <contributor uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128" contribution="Map Packaging and XML"/> <!-- zzuf -->
+    <contributor uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128" contribution="XML"/> <!-- zzuf -->
 </contributors>
 <teams>
     <team id="blue-team" color="blue" dye-color="blue" max="16">Blue</team>
