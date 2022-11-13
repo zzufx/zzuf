@@ -1,7 +1,6 @@
 <map proto="1.4.2">
 <name>GS: Earthborn</name> <!-- Ghost Squadron version of Earthborn -->
 <version>1.0</version>
-<objective>Eliminate the other team before the time runs out!</objective>
 <created>2022-11-09</created>
 <authors>
     <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128"/> <!-- zzuf -->
@@ -30,6 +29,8 @@
 <!-- ********** -->
 <!-- GS Include --> <!-- Modified by zzuf - made some stuff work in 1.4.2, modified some stuff to my liking, changed some things to how they were in the original 1.5.2 GS map and fixed a lot of typos -->
 <!-- ********** -->
+<objective>Eliminate the other team before the time runs out!</objective>
+<gamemode>blitz</gamemode>
 <game>Ghost Squadron</game>
 <kits>
     <kit id="potions" potion-particles="true">
