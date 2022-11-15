@@ -2,6 +2,7 @@
 <name>GS: Earthborn</name> <!-- Ghost Squadron version of Earthborn -->
 <version>1.0</version>
 <created>2022-11-09</created>
+<!-- <include id="gs"/> -->
 <authors>
     <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128"/> <!-- zzuf -->
 </authors>
@@ -174,7 +175,7 @@
                 <class>Archer</class>
             </all>
         </filter>
-        <item amount="1" id="`3Explosive Arrow" enchantment="thorns:1" grenade="true" grenade-fire="true" grenade-power="2">arrow</item>
+        <item amount="1" name="`3Explosive Arrow" enchantment="thorns:1" grenade="true" grenade-fire="true" grenade-power="2">arrow</item>
     </kill-reward>
     <kill-reward>
         <filter>
@@ -194,8 +195,8 @@
                 <class>Demo</class>
             </all>
         </filter>
-        <item amount="3" id="`4Landmine">tnt</item>
-        <item amount="5" id="`4Grenade" grenade="true" grenade-power="1.2">snow ball</item>
+        <item amount="3" name="`4Landmine">tnt</item>
+        <item amount="5" name="`4Grenade" grenade="true" grenade-power="1.2">snow ball</item>
     </kill-reward>
     <kill-reward>
         <filter>
@@ -239,7 +240,7 @@
             </all>
         </filter>
         <item amount="3">web</item>
-        <!-- <item id="`aWeb Ammo" amount="8">arrow</item> -->
+        <!-- <item name="`aWeb Ammo" amount="8">arrow</item> -->
     </kill-reward>
     <kill-reward>
         <filter>
@@ -248,7 +249,7 @@
                 <class>Wolf Tamer</class>
             </all>
         </filter>
-        <item amount="8" attributes="generic.attackDamage:add:1" id="`rWolf Food">bone</item>
+        <item amount="8" attributes="generic.attackDamage:add:1" name="`rWolf Food">bone</item>
         <item amount="1" damage="95" enchantment="thorns:1">monster egg</item>
     </kill-reward>
     <kill-reward>
@@ -258,8 +259,8 @@
                 <class>Specialist</class>
             </all>
         </filter>
-        <item id="`eShocker Potion" amount="3" damage="16419" potions="poison:75:15:true;slow:75:5:true">potion</item>
-        <item id="`eRocket Ammo" amount="5" grenade="true" grenade-power="1.5">arrow</item>
+        <item name="`eShocker Potion" amount="3" damage="16419" potions="poison:75:15:true;slow:75:5:true">potion</item>
+        <item name="`eRocket Ammo" amount="5" grenade="true" grenade-power="1.5">arrow</item>
     </kill-reward>
     <kill-reward>
         <filter>
