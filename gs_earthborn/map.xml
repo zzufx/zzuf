@@ -40,6 +40,7 @@
         <effect ambient="true" duration="oo" amplifier="1">increase damage</effect>
         <effect ambient="false" duration="150" amplifier="1">invisibility</effect>
         <item slot="8" amount="10">cooked beef</item>
+        <game-mode>adventure</game-mode>
     </kit>
 </kits>
 <classes family="ghost" sticky="true">
@@ -57,8 +58,8 @@
     </class>
     <class name="Pyro" description="Light players on fire via bow or melee!" longdescription="A fire melee tool and 10 arrows (with Flame) help you get several hits on an enemy!" icon="flint and steel">
         <kit parents="potions">
-            <item slot="0" enchantment="arrow fire:1" name="`6Fire Bow" material="bow"/>
-            <item slot="1" enchantment="fire aspect:1" name="`6Fire Stick" material="blaze rod"/> <!-- this was used in the original Ghost Squadron map, instead of the flint and steel -->
+            <item slot="0" enchantment="fire aspect:1" name="`6Fire Stick" material="blaze rod"/> <!-- this was used in the original Ghost Squadron map, instead of the flint and steel -->
+            <item slot="1" enchantment="arrow fire:1" name="`6Fire Bow" material="bow"/>
             <item slot="7" amount="10" name="`6Fire Arrow" enchantment="thorns:1" material="arrow"/>
         </kit>
     </class>
@@ -79,7 +80,7 @@
             </item>
         </kit>
     </class>
-    <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
+    <class name="Spawner" description="Spawn slimes, zombies and creepers!" longdescription="Scare your enemies with slimes, creepers and zombies!" icon="monster egg">
         <kit parents="potions">
             <item slot="0" amount="2" damage="55" enchantment="thorns:1" material="monster egg"/> <!-- Slime -->
             <item slot="2" amount="3" damage="54" enchantment="thorns:1" material="monster egg"/> <!-- Zombie -->
@@ -94,14 +95,22 @@
     </class>
     <class name="Demo" description="Place landmines or fire grenades!" longdescription="BOOM! Combine grenades and landmines together to destroy your enemies!" icon="tnt">
         <kit parents="potions">
-            <item slot="0" amount="3" name="`4Landmine" lore="`7Use grenades to ignite!" material="tnt"/>
+            <item slot="0" amount="3" name="`4Landmine" lore="`7Use grenades to ignite!" material="tnt" show-can-place-on="false">
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
             <item slot="1" amount="12" name="`4Grenade" grenade="true" grenade-power="1.2" material="snow ball"/>
         </kit>
     </class>
     <class name="Spider" description="Some webs to trap players!" longdescription="Place some webs around the map to trap players!" icon="web">
         <kit parents="potions">
             <item slot="0" attributes="generic.attackDamage:add:1.25" material="spider eye"/>
-            <item slot="2" amount="6" material="web"/>
+            <item slot="2" amount="6" material="web" show-can-place-on="false">
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
             <!-- <item slot="1" name="`aWeb Bow">bow</item> -->
             <!-- <item slot="2" amount="3">web</item> -->
             <!-- <item slot="7" name="`aWeb Ammo" amount="16">arrow</item> -->
