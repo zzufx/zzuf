@@ -155,6 +155,9 @@
     <item>stone pickaxe</item>
     <item>iron axe</item>
     <item>iron spade</item>
+    <item>wood</item>
+    <item>glass</item>
+    <item>golden apple</item>
 </itemkeep>
 <itemremove>
     <item>leather helmet</item>
@@ -165,7 +168,7 @@
 <toolrepair>
     <tool>stone sword</tool>
     <tool>bow</tool>
-    <tool>iron pickaxe</tool>
+    <tool>stone pickaxe</tool>
     <tool>iron axe</tool>
     <tool>iron spade</tool>
     <tool>arrow</tool>
