@@ -53,14 +53,14 @@
     <class name="Archer" default="true" description="Pew pew, lots of arrows!" longdescription="With a bow and plenty of arrows, it's easy to follow shot enemies!" icon="bow">
         <kit parents="potions">
             <item slot="0" name="`3Reveal Bow" enchantment="thorns:1">bow</item>
-            <item slot="7" amount="64" name="`3Reveal Arrow" enchantment="thorns:1" material="arrow"/>
+            <item slot="7" amount="64" material="arrow"/>
         </kit>
     </class>
     <class name="Pyro" description="Light players on fire via bow or melee!" longdescription="A fire melee tool and 10 arrows (with Flame) help you get several hits on an enemy!" icon="flint and steel">
         <kit parents="potions">
             <item slot="0" enchantment="fire aspect:1" name="`6Fire Stick" material="blaze rod"/> <!-- this was used in the original Ghost Squadron map, instead of the flint and steel -->
             <item slot="1" enchantment="arrow fire:1" name="`6Fire Bow" material="bow"/>
-            <item slot="7" amount="10" name="`6Fire Arrow" enchantment="thorns:1" material="arrow"/>
+            <item slot="7" amount="10" material="arrow"/>
         </kit>
     </class>
     <class name="Bruiser" description="A wooden sword! Break cobwebs!" longdescription="A wooden sword and the ability to break cobwebs -- very useful for removing artifacts of the Spider class!" icon="wood sword">
@@ -218,7 +218,7 @@
                 <class>Pyro</class>
             </all>
         </filter>
-        <item amount="5" id="`6Fire Arrow" enchantment="thorns:1">arrow</item>
+        <item amount="5">arrow</item>
     </kill-reward>
     <kill-reward>
         <filter>
