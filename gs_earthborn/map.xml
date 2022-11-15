@@ -66,7 +66,11 @@
     </class>
     <class name="Bruiser" description="A wooden sword! Break cobwebs!" longdescription="A wooden sword and the ability to break cobwebs -- very useful for removing artifacts of the Spider class!" icon="wood sword">
         <kit parents="potions">
-            <item slot="0" unbreakable="true" material="wood sword"/>
+            <item slot="0" unbreakable="true" material="wood sword">
+                <can-destroy>
+                    <material>web</material>
+                </can-destroy>
+            </item>
             <effect ambient="true" duration="oo" amplifier="1">slow</effect>
             <effect ambient="true" duration="oo" amplifier="-2">health boost</effect>
         </kit>
