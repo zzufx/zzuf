@@ -12,42 +12,39 @@
     <contributor uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128" contribution="XML"/> <!-- zzuf -->
 </contributors>
 <teams>
-    <team id="blue-team" color="blue" dye-color="blue" max="16">Blue</team>
-    <team id="red-team" color="dark red" dye-color="red" max="16">Red</team>
+    <team id="blue-team" color="blue" dye-color="blue" max="8">Blue</team>
+    <team id="red-team" color="dark red" dye-color="red" max="8">Red</team>
 </teams>
 <spawns>
-    <spawn team="blue-team" kit="spawn-kit" yaw="180">
+    <spawn team="blue-team" kit="spawn-kit" yaw="0">
         <regions>
-            <point>-15.5,8.5,-83.5</point>
+            <point>-15.5,9.5,-87.5</point>
         </regions>
     </spawn>
-    <spawn team="red-team" kit="spawn-kit" yaw="0">
+    <spawn team="red-team" kit="spawn-kit" yaw="180">
         <regions>
-            <point>-9.5,8.5,-185.5</point>
+            <point>-9.5,9.5,-181.5</point>
         </regions>
     </spawn>
-    <default>
+    <default kit="default-kit">
         <regions>
             <point yaw="180">-12.5,49.5,-135</point>
         </regions>
     </default>
 </spawns>
 <kits>
-    <kit id="spawn-kit">
+    <kit id="default-kit">
+        <effect duration="oo">night vision</effect>
+    </kit>
+    <kit id="spawn-kit" parents="default-kit">
         <clear/>
         <item slot="0" material="stone sword" unbreakable="true"/>
         <item slot="1" material="bow" unbreakable="true">
             <enchantment>infinity</enchantment>
         </item>
-        <item slot="2" material="stone pickaxe" unbreakable="true">
-            <enchantment level="2">efficiency</enchantment>
-        </item>
-        <item slot="3" material="iron axe" unbreakable="true">
-            <enchantment>efficiency</enchantment>
-        </item>
-        <item slot="4" material="iron spade" unbreakable="true">
-            <enchantment>efficiency</enchantment>
-        </item>
+        <item slot="2" material="stone pickaxe" unbreakable="true"/>
+        <item slot="3" material="stone axe" unbreakable="true"/>
+        <item slot="4" material="stone spade" unbreakable="true"/>
         <item slot="5" amount="64" damage="5" material="wood"/>
         <item slot="6"  amount="16" material="glass"/>
         <item slot="8" material="golden apple"/>
@@ -63,9 +60,6 @@
 <filters>
     <deny id="deny-void">
         <void/>
-    </deny>
-    <deny id="deny-players">
-        <participating/>
     </deny>
     <deny id="deny-red">
         <team id="only-red">red-team</team>
@@ -89,6 +83,7 @@
             <material>flower pot</material>
             <material>sandstone stairs</material>
             <material>step:1</material>
+            <material>double step:1</material>
             <material>birch wood stairs</material>
         </any>
     </deny>
@@ -115,8 +110,8 @@
     </union>
     <apply block="deny-skull" region="skull-areas" message="You may not break nor place that block here!"/>
     <union id="blocked-areas">
-        <cuboid min="-16,16,-97" max="-15,60,-70"/> <!-- blue side -->
-        <cuboid min="-9,16,-172" max="-10,60,-200"/> <!-- red side -->
+        <cuboid min="-16,15,-97" max="-15,60,-70"/> <!-- blue side -->
+        <cuboid min="-9,15,-172" max="-10,60,-200"/> <!-- red side -->
     </union>
     <apply enter="never" region="blocked-areas" message="You may not go through here!"/>
     <union id="spawn-areas">
@@ -153,8 +148,8 @@
     <item>stone sword</item>
     <item>bow</item>
     <item>stone pickaxe</item>
-    <item>iron axe</item>
-    <item>iron spade</item>
+    <item>stone axe</item>
+    <item>stone spade</item>
     <item>wood</item>
     <item>glass</item>
     <item>golden apple</item>
@@ -169,8 +164,8 @@
     <tool>stone sword</tool>
     <tool>bow</tool>
     <tool>stone pickaxe</tool>
-    <tool>iron axe</tool>
-    <tool>iron spade</tool>
+    <tool>stone axe</tool>
+    <tool>stone spade</tool>
     <tool>arrow</tool>
 </toolrepair>
 <kill-rewards>
