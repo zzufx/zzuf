@@ -94,7 +94,7 @@
     </class>
     <class name="Demo" description="Place landmines or fire grenades!" longdescription="BOOM! Combine grenades and landmines together to destroy your enemies!" icon="tnt">
         <kit parents="potions">
-            <item slot="0" amount="6" name="`4Landmine" lore="`7Use grenades to ignite!" material="tnt"/>
+            <item slot="0" amount="3" name="`4Landmine" lore="`7Use grenades to ignite!" material="tnt"/>
             <item slot="1" amount="12" name="`4Grenade" grenade="true" grenade-power="1.2" material="snow ball"/>
         </kit>
     </class>
