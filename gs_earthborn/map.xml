@@ -87,15 +87,31 @@
     </class>
     <class name="Spawner" description="Spawn slimes, zombies and creepers!" longdescription="Scare your enemies with slimes, creepers and zombies!" icon="monster egg">
         <kit parents="potions">
-            <item slot="0" amount="2" damage="55" enchantment="thorns:1" material="monster egg"/> <!-- Slime -->
-            <item slot="2" amount="3" damage="54" enchantment="thorns:1" material="monster egg"/> <!-- Zombie -->
-            <item slot="3" amount="1" damage="50" enchantment="thorns:1" material="monster egg"/> <!-- Creeper -->
+            <item slot="0" amount="2" damage="55" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Slime -->
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
+            <item slot="2" amount="3" damage="54" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Zombie -->
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
+            <item slot="3" amount="1" damage="50" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Creeper -->
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
         </kit>
     </class>
     <class name="Wolf Tamer" description="Be part of a wolf pack!" longdescription="Spawn up to 2 wolves to assist you in battle" icon="bone">
         <kit parents="potions">
             <item slot="0" amount="64" attributes="generic.attackDamage:add:1" name="`rWolf Food" material="bone"/>
-            <item slot="1" amount="2" damage="95" enchantment="thorns:1" material="monster egg"/>
+            <item slot="1" amount="2" damage="95" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Wolf -->
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
         </kit>
     </class>
     <class name="Demo" description="Place landmines or fire grenades!" longdescription="BOOM! Combine grenades and landmines together to destroy your enemies!" icon="tnt">
@@ -124,7 +140,11 @@
     <class name="Wizard" description="Summon a witch minion!" longdescription="Spawn a witch to follow your orders." icon="brewing stand item">
         <kit parents="potions">
             <item slot="0" amount="1" attributes="generic.attackDamage:add:1" material="ghast tear"/>
-            <item slot="1" amount="1" damage="66" enchantment="thorns:1" material="monster egg"/>
+            <item slot="1" amount="1" damage="66" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Witch -->
+                <can-place-on>
+                    <all-blocks/>
+                </can-place-on>
+            </item>
             <item slot="2" amount="2" damage="16460" material="potion"/> <!-- Instant Damage I -->
         </kit>
     </class>
@@ -136,12 +156,12 @@
             <item slot="7" name="`eRocket Ammo" amount="5" grenade="true" grenade-power="1.5" material="arrow"/>
         </kit>
     </class>
-    <class name="Ninja" description="Who? What? Where?" longdescription="Jump, Speed, Fishing Rod, less health! Remember: Use the fishing rod carefully, as it also reveals your position!" icon="iron fence">
+    <class name="Ninja" description="Who? What? Where?" longdescription="Jump, Speed, Fishing Rod, less health! Remember: Use the fishing rod to track your enemies, but be careful, as it also reveals your position!" icon="iron fence">
         <kit parents="potions">
             <effect ambient="true" duration="oo" amplifier="2">jump</effect>
             <effect ambient="true" duration="oo" amplifier="1">speed</effect>
             <effect ambient="true" duration="oo" amplifier="-1">health boost</effect>
-            <item slot="0" enchantment="durability:1" name="`d`lGrappling Hook" material="fishing rod"/>
+            <item slot="0" enchantment="thorns:1" unbreakable="true" material="fishing rod"/>
         </kit>
     </class>
     <!-- ************ Disabled Classes ************ -->
@@ -199,7 +219,11 @@
                 <class>Demo</class>
             </all>
         </filter>
-        <item amount="3" name="`4Landmine">tnt</item>
+        <item amount="3" name="`4Landmine" lore="`7Use grenades to ignite!" material="tnt" show-can-place-on="false">
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
         <item amount="5" name="`4Grenade" grenade="true" grenade-power="1.2">snow ball</item>
     </kill-reward>
     <kill-reward>
@@ -232,9 +256,21 @@
                 <class>Spawner</class>
             </all>
         </filter>
-        <item amount="1" damage="54" enchantment="thorns:1">monster egg</item> <!-- Zombie -->
-        <item amount="1" damage="50" enchantment="thorns:1">monster egg</item> <!-- Creeper -->
-        <item slot="1" amount="1" damage="51" enchantment="thorns:1">monster egg</item> <!-- Skeleton -->
+        <item amount="1" damage="54" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Zombie -->
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
+        <item amount="1" damage="50" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Creeper -->
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
+        <item amount="1" damage="51" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Skeleton -->
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
     </kill-reward>
     <kill-reward>
         <filter>
@@ -243,7 +279,11 @@
                 <class>Spider</class>
             </all>
         </filter>
-        <item amount="3">web</item>
+        <item amount="3" material="web" show-can-place-on="false">
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
         <!-- <item name="`aWeb Ammo" amount="8">arrow</item> -->
     </kill-reward>
     <kill-reward>
@@ -254,7 +294,11 @@
             </all>
         </filter>
         <item amount="8" attributes="generic.attackDamage:add:1" name="`rWolf Food">bone</item>
-        <item amount="1" damage="95" enchantment="thorns:1">monster egg</item>
+        <item amount="1" damage="95" enchantment="thorns:1" material="monster egg" show-can-place-on="false"> <!-- Wolf -->
+            <can-place-on>
+                <all-blocks/>
+            </can-place-on>
+        </item>
     </kill-reward>
     <kill-reward>
         <filter>
@@ -332,6 +376,9 @@
         </any>
     </not>
 </damage>
+<toolrepair>
+    <tool>arrow</tool>
+</toolrepair>
 <itemremove>
     <item>stick</item>
     <item>tnt</item>
