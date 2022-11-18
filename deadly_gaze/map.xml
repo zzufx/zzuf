@@ -101,7 +101,7 @@
     </negative>
     <apply block-place="deny-void" region="void-area" message="You may not edit the void!"/>
     <negative id="middle-tree">
-        <rectangle min="-9,-132" max="-12,-130"/>
+        <rectangle min="-20,-129" max="-5,-140"/>
     </negative>
     <apply block-break="deny-web" region="middle-tree" message="You may not break the cobwebs!"/>
     <union id="skull-areas">
