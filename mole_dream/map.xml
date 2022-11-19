@@ -122,11 +122,12 @@
     <item>beacon</item>
 </itemremove>
 <toolrepair>
-    <item>stone sword</item>
-    <item>bow</item>
-    <item>diamond pickaxe</item>
-    <item>stone axe</item>
-    <item>stone spade</item>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>arrow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>stone axe</tool>
+    <tool>stone spade</tool>
 </toolrepair>
 <renewables>
     <renewable region="iron-mines" renew-filter="only-iron" rate="4" avoid-players="1"/>
