@@ -41,7 +41,7 @@
         <item slot="4" amount="32" material="glass"/>
         <item slot="5" material="stone spade" unbreakable="true"/>
         <item slot="6" material="stone axe" unbreakable="true"/>
-        <item slot="7"  amount="16" material="cooked beef"/>
+        <item slot="7"  amount="48" material="cooked beef"/>
         <item slot="8" material="golden apple"/>
         <item slot="28" amount="64" material="arrow"/>
         <item slot="30" amount="64" material="wood"/>
