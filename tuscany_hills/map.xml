@@ -11,7 +11,7 @@
 </contributors>
 <rules>
     <rule>Players may not take fall damage.</rule>
-    <rule>Players who carry a flag get Slowness I and their Projectile Protection removed.</rule>
+    <rule>Players who carry a flag get Slowness I and their Projectile Protection is removed.</rule>
 </rules>
 <teams>
     <team id="red-team" color="dark red" max="20">Red</team>
