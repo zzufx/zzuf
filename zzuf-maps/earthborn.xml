@@ -1,12 +1,12 @@
 <map proto="1.4.2">
 <name>Earthborn</name>
 <version>2.0</version>
-<objective>Kill all opponent players in less than 6 minutes!</objective>
+<objective>Eliminate all opponent players in less than 4 minutes!</objective>
 <gamemode>br</gamemode>
 <created>2013-06-21</created>
 <blitz/>
 <rage/>
-<time>6m</time>
+<time>4m</time>
 <authors>
     <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128"/> <!-- zzuf -->
 </authors>
