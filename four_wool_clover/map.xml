@@ -257,6 +257,22 @@
             <item chance="0" material="stained clay"/>
         </drops>
     </rule>
+    <rule>
+        <filter>
+            <material>quartz block</material>
+        </filter>
+        <drops>
+            <item chance="0" material="quartz block"/>
+        </drops>
+    </rule>
+    <rule>
+        <filter>
+            <material>coal block</material>
+        </filter>
+        <drops>
+            <item chance="0" material="coal block"/>
+        </drops>
+    </rule>
 </block-drops>
 <itemkeep>
     <item>stone sword</item>
