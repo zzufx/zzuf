@@ -51,7 +51,7 @@
         <chestplate material="leather chestplate" team-color="true" unbreakable="true"/>
         <leggings material="chainmail leggings" unbreakable="true"/>
         <boots material="leather boots" team-color="true" unbreakable="true"/>
-        <effect duration="4" amplifier="255">resistance</effect>
+        <effect duration="6" amplifier="255">resistance</effect>
     </kit>
 </kits>
 <filters>
