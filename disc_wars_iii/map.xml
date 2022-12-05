@@ -13,8 +13,8 @@
 <gamemode>rage</gamemode>
 <rage/>
 <teams>
-    <team id="blue" color="blue" max="18">Blue</team>
-    <team id="red" color="dark red" max="18">Red</team>
+    <team id="blue" color="blue" max="24">Blue</team>
+    <team id="red" color="dark red" max="24">Red</team>
 </teams>
 <kits>
     <kit id="default-kit">
