@@ -8,7 +8,7 @@
 </authors>
 <broadcasts>
     <tip after="2s" every="4m">Pick up `eGold Blocks`r from the spawner at middle to repair your monument!</tip>
-    <tip after="4s" every="4m">Keep in mind that you'll also get Slowness 5 and won't be able to jump for a bit!</tip>
+    <tip after="4s" every="4m">Keep in mind that you'll also get Slowness 5 for a bit!</tip>
 </broadcasts>
 <teams>
     <team id="red-team" color="dark red" max="12">Red</team>
@@ -70,6 +70,9 @@
     <deny id="deny-beacon">
         <material>beacon</material>
     </deny>
+    <deny id="deny-gold-block">
+        <material>gold block</material>
+    </deny>
 </filters>
 <regions>
     <above y="21" id="ceiling"/>
@@ -85,7 +88,6 @@
     </negative>
     <apply block="deny-void" region="void-area" message="You may not edit the void!"/>
     <point id="middle-spawner-point">0.5,6.5,0.5</point>
-    <!-- <cuboid id="middle-spawner-area" min="-2,6,-2" max="3,9,3"/> -->
     <block id="middle-spawner-area">0,6,0</block>
     <rectangle id="middle-spawner-greater-area" min="-2,-2" max="3,3"/>
     <apply block="deny-players" region="middle-spawner-greater-area" message="You may not edit this area!"/>
@@ -102,25 +104,22 @@
     <apply block="never" region="spawn-areas" message="You may not modify the spawn areas!"/>
     <apply enter="only-red" region="red-spawn-areas" message="You may not enter you enemy's spawn area!"/>
     <apply enter="only-yellow" region="yellow-spawn-areas" message="You may not enter you enemy's spawn area!"/> 
+    <!-- Monuments -->
+    <negative id="not-monuments">
+        <cuboid id="red-monument" min="-77,18,-1" max="-80,15,2"/>
+        <cuboid id="yellow-monument" min="78,18,2" max="81,15,-1"/>
+    </negative>
+    <apply block-place="deny-gold-block" region="not-monuments" message="You may only place `eGold Blocks`r in your damaged monument!"/>
 </regions>
 <destroyables materials="gold block" show-progress="true" completion="100%" required="true" repairable="true">
-    <destroyable owner="red-team" name="Red Monument">
-        <region>
-            <cuboid min="-77,18,-1" max="-80,15,2"/>
-        </region>
-    </destroyable>
-    <destroyable owner="yellow-team" name="Yellow Monument">
-        <region>
-            <cuboid min="78,18,2" max="81,15,-1"/>
-        </region>
-    </destroyable>
+    <destroyable owner="red-team" name="Red Monument" region="red-monument"/>
+    <destroyable owner="yellow-team" name="Yellow Monument" region="yellow-monument"/>
 </destroyables>
 <spawners>
     <spawner spawn-region="middle-spawner-point" player-region="middle-spawner-area" delay="40" max-entities="1">
         <item material="gold block" amount="1"/>
         <potion duration="30" amplifier="5" damage="10">
             <effect>slowness</effect>
-            <effect amplifier="-2">jump_boost</effect>
         </potion>
     </spawner>
 </spawners>
