@@ -103,7 +103,7 @@
     </union>
     <apply block="never" region="spawn-areas" message="You may not modify the spawn areas!"/>
     <apply enter="only-red" region="red-spawn-areas" message="You may not enter you enemy's spawn area!"/>
-    <apply enter="only-yellow" region="yellow-spawn-areas" message="You may not enter you enemy's spawn area!"/> 
+    <apply enter="only-yellow" region="yellow-spawn-areas" message="You may not enter you enemy's spawn area!"/>
     <!-- Monuments -->
     <negative id="not-monuments">
         <cuboid id="red-monument" min="-77,18,-1" max="-80,15,2"/>
