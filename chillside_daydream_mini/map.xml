@@ -60,11 +60,11 @@
     </deny>
     <deny id="deny-web">
         <all>
-            <material>web</material>
+            <material id="only-web">web</material>
             <void/>
         </all>
     </deny>
-    <deny id="wr-protection">
+    <!-- <deny id="wr-protection">
         <blocks id="wool-room-blocks" region="woolrooms">
             <not>
                 <any>
@@ -73,7 +73,7 @@
                 </any>
             </not>
         </blocks>
-    </deny>
+    </deny> -->
     <deny id="deny-red">
         <team id="only-red">red-team</team>
     </deny>
@@ -88,19 +88,19 @@
     </deny>
     <all id="blue-wr-rules">
         <filter id="deny-blue"/>
-        <filter id="wr-protection"/>
+        <filter id="only-web"/>
     </all>
     <all id="green-wr-rules">
         <filter id="deny-green"/>
-        <filter id="wr-protection"/>
+        <filter id="only-web"/>
     </all>
     <all id="red-wr-rules">
         <filter id="deny-red"/>
-        <filter id="wr-protection"/>
+        <filter id="only-web"/>
     </all>
     <all id="yellow-wr-rules">
         <filter id="deny-yellow"/>
-        <filter id="wr-protection"/>
+        <filter id="only-web"/>
     </all>
     <all id="only-gold-renew">
         <material id="only-gold">gold block</material>
