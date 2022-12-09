@@ -32,7 +32,6 @@
 <!-- GS Include -->
 <!-- ********** -->
 <!-- Modified by zzuf from the original gs.xml file from the Overcast Network -->
-<objective>Eliminate the other team before the time runs out!</objective>
 <gamemode>blitz</gamemode>
 <game>Ghost Squadron</game>
 <kits>
