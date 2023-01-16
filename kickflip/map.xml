@@ -46,17 +46,11 @@
     </kit>
 </kits>
 <filters>
-    <deny id="deny-players">
-        <participating/>
-    </deny>
     <deny id="deny-red">
         <team id="only-red">red-team</team>
     </deny>
     <deny id="deny-blue">
         <team id="only-blue">blue-team</team>
-    </deny>
-    <deny id="no-void">
-        <void/>
     </deny>
 </filters>
 <regions>
@@ -64,15 +58,16 @@
     <union id="hill-regions">
         <cuboid id="capture-a" min="17,6,28" size="7,5,7"/>
         <cuboid id="signal-a" min="19,29,30" size="3,3,3"/>
-        
         <cuboid id="capture-b" min="-3,6,-4" size="7,5,7"/>
         <cuboid id="signal-b" min="-1,29,-2" size="3,3,3"/>
-        
         <cuboid id="capture-c" min="-23,6,-36" size="7,5,7"/>
         <cuboid id="signal-c" min="-21,29,-34" size="3,3,3"/>
     </union>
     <point id="gapple-point">0.5,2.2,-0.5</point>
-    <!-- 7 2.5 2 -->
+    <circle id="blue-spawn-area" center="-27.5,44.5" radius="6.5"/>
+    <circle id="red-spawn-area" center="28.5,-45.5" radius="6.5"/>
+    <apply enter="only-blue" region="blue-spawn-area" message="You may not enter your opponent's spawn!"/>
+    <apply enter="only-red" region="red-spawn-area" message="You may not enter your opponent's spawn!"/>
     <apply velocity="7,2.5,2">
         <region>
             <cuboid min="-14,11,-23" size="2,1,2"/>
