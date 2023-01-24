@@ -135,6 +135,7 @@
     <item>wood</item>
     <item>glass</item>
     <item>golden apple</item>
+    <item>shears</item>
 </itemkeep>
 <itemremove>
     <item>leather helmet</item>
@@ -149,6 +150,7 @@
     <tool>iron axe</tool>
     <tool>iron spade</tool>
     <tool>arrow</tool>
+    <tool>shears</tool>
 </toolrepair>
 <kill-rewards>
     <kill-reward>
