@@ -64,6 +64,12 @@
         <filter id="only-blue"/>
         <material>web</material>
     </all>
+    <blocks id="only-wool-room" region="wool-rooms">
+        <any>
+            <material>air</material>
+            <material>web</material>
+        </any>
+    </blocks>
 </filters>
 <regions>
     <!-- Void -->
@@ -100,7 +106,7 @@
     <apply block="never" region="red-spawn-area" message="You may not modify blocks here."/>
     <apply use="never" region="red-spawn-area"/>
     <apply enter="deny-blue" region="red-spawn-area" message="You may not enter your enemies' spawn!"/>
-    <!-- BLue -->
+    <!-- Blue -->
     <complement id="blue-spawn-area">
         <rectangle min="8,-52" max="26,-66"/>
         <region id="victory-monuments"/>
@@ -109,10 +115,13 @@
     <apply use="never" region="blue-spawn-area"/>
     <apply enter="deny-red" region="blue-spawn-area" message="You may not enter your enemies' spawn!"/>
     <!-- Wool rooms -->
-    <rectangle id="green-wool-room" min="-10,-59" max="-23,-75"/>
-    <rectangle id="orange-wool-room" min="11,60" max="24,76"/>
-    <apply block="blue-in-wr" region="orange-wool-room" message="You may not modify the wool room!"/>
-    <apply block="red-in-wr" region="green-wool-room" message="You may not modify the wool room!"/>
+    <union id="wool-rooms">
+        <cuboid id="green-wool-room" min="-10,0,-59" max="-23,39,-75"/>
+        <cuboid id="orange-wool-room" min="11,0,60" max="24,39,76"/>
+    </union>
+    <apply block="deny-red" region="orange-wool-room" message="You may not modify the wool room!"/>
+    <apply block="deny-blue" region="green-wool-room" message="You may not modify the wool room!"/>
+    <apply block="only-wool-room" region="wool-rooms" message="You may not modify the wool room!"/>
     <apply enter="only-blue" region="orange-wool-room" message="You may not enter your team's wool room!"/>
     <apply enter="only-red" region="green-wool-room" message="You may not enter your team's wool room!"/>
     <!-- Victory monuments -->
