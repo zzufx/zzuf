@@ -56,14 +56,6 @@
     <deny id="deny-blue">
         <team id="only-blue">blue-team</team>
     </deny>
-    <all id="red-in-wr">
-        <filter id="only-red"/>
-        <material>web</material>
-    </all>
-    <all id="blue-in-wr">
-        <filter id="only-blue"/>
-        <material>web</material>
-    </all>
     <blocks id="only-wool-room" region="wool-rooms">
         <any>
             <material>air</material>
@@ -94,7 +86,7 @@
     </negative>
     <apply block="deny-void" region="void-area" message="You may not edit the void!"/>
     <cuboid id="obs-spawn" min="-3,26,-3" size="7,4,7"/>
-    <apply block="never" region="obs-spawn" message="You may not break the observer's spawn!"/>
+    <apply block="never" region="obs-spawn" message="You may not modify the observer's spawn!"/>
     <!-- Spawns -->
     <point id="red-spawn" yaw="180">-17.5,11,59.5</point>
     <point id="blue-spawn" yaw="0">18.5,11,-58.5</point>
@@ -111,13 +103,13 @@
         <rectangle min="8,-52" max="26,-66"/>
         <region id="victory-monuments"/>
     </complement>
-    <apply block="never" use="never" region="blue-spawn-area" message="You may not modify blocks here."/>
+    <apply block="never" region="blue-spawn-area" message="You may not modify blocks here."/>
     <apply use="never" region="blue-spawn-area"/>
     <apply enter="deny-red" region="blue-spawn-area" message="You may not enter your enemies' spawn!"/>
     <!-- Wool rooms -->
     <union id="wool-rooms">
-        <cuboid id="green-wool-room" min="-10,0,-59" max="-23,39,-75"/>
-        <cuboid id="orange-wool-room" min="11,0,60" max="24,39,76"/>
+        <cuboid id="green-wool-room" min="-10,0,-59" max="-23,128,-75"/>
+        <cuboid id="orange-wool-room" min="11,0,60" max="24,128,76"/>
     </union>
     <apply block="deny-red" region="orange-wool-room" message="You may not modify the wool room!"/>
     <apply block="deny-blue" region="green-wool-room" message="You may not modify the wool room!"/>
