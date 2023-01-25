@@ -1,6 +1,6 @@
 <map proto="1.4.2">
 <name>Deepwood</name>
-<version>1.0</version>
+<version>0.1.18</version>
 <objective>Destroy the enemy's monuments at the sides of their spawn!</objective>
 <created>2023-01-23</created>
 <maxbuildheight>44</maxbuildheight>
@@ -86,10 +86,7 @@
         <rectangle min="33,68" max="-7,48"/> <!-- Red void gap-->
     </negative>
     <apply block="deny-void" region="void-area" message="You may not edit the void!"/>
-    <complement id="middle">
-        <rectangle min="66,-26" max="-65,29"/> <!-- Middle -->
-        <region id="middle-island"/>
-    </complement>
+    <rectangle id="middle" min="66,-26" max="-65,29"/> <!-- Middle -->
     <!-- iron mines -->
     <union id="iron-mines">
         <union id="blue-iron-mine">
@@ -118,17 +115,7 @@
     <apply block-break="only-ceiling" region="ceiling" message="You may not break this block!"/>
     <above y="70" id="super-ceiling"/>
     <apply block="never" region="super-ceiling" message="You may not modify blocks here"/>
-    <!-- middle -->
-    <circle id="middle-island" center="0.5,1.5" radius="9.5"/>
-    <cylinder id="gapple-area" base="0.5,25.1,1.5" radius="4" height="5"/>
-    <point id="gapple-point">0.5,25.1,1.5</point>
-    <apply block="never" region="middle-island" message="You may not modify this island!"/>
 </regions>
-<spawners>
-    <spawner spawn-region="gapple-point" player-region="gapple-area" delay="6">
-        <item amount="1" material="golden apple"/>
-    </spawner>
-</spawners>
 <destroyables materials="obsidian" completion="100%" required="true" mode-changes="true">
     <destroyable owner="blue-team" name="Waterfall Monument"> <!-- East Monument -->
         <region>
