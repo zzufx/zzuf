@@ -48,12 +48,6 @@
         <boots material="leather boots" team-color="true" unbreakable="true"/>
         <effect duration="5" amplifier="255">resistance</effect>
     </kit>
-    <kit id="survival-kit">
-        <game-mode>survival</game-mode>
-    </kit>
-    <kit id="adventure-kit">
-        <game-mode>adventure</game-mode>
-    </kit>
 </kits>
 <filters>
     <deny id="deny-void">
