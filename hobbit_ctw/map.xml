@@ -4,6 +4,7 @@
 <objective>Take the enemy's wool located near their base and place it back at your spawn!</objective>
 <created>2023-01-24</created>
 <maxbuildheight>21</maxbuildheight>
+<gamemode>ctw</gamemode>
 <authors>
     <author uuid="f8753ae6-a7ed-4d88-8d6d-537a5b1687e4"/> <!-- guini2 -->
 </authors>
