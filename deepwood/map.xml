@@ -204,6 +204,6 @@
     </kill-reward>
 </kill-rewards>
 <gamerules>
-    <doDaylightCycle>false</doDaylightCycle>
+    <doDaylightCycle>true</doDaylightCycle>
 </gamerules>
 </map>
