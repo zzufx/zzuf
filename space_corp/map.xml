@@ -4,8 +4,8 @@
 <objective>Destroy the enemy team's emerald monument!</objective>
 <gamemode>dtm</gamemode>
 <created>2023-01-28</created>
-<maxbuildheight>25</maxbuildheight>
-<respawn delay="5s"/>
+<maxbuildheight>23</maxbuildheight>
+<respawn delay="3s"/>
 <authors>
     <author uuid="ec5ec930-5cf3-4f8a-ad9f-09056aeed71b"/> <!-- Tundren -->
     <author uuid="b2539be1-8f98-4375-b653-9d91cd04c30e"/> <!-- Mewzzy -->
@@ -50,11 +50,10 @@
         <item slot="4" material="iron spade" unbreakable="true">
             <enchantment>efficiency</enchantment>
         </item>
-        <item slot="5" amount="48" material="wood"/>
-        <item slot="6" material="bucket"/>
+        <item slot="5" amount="32" material="wood"/>
         <item slot="8" material="golden apple"/>
         <item slot="28" material="arrow"/>
-        <helmet material="leather helmet" team-color="true" unbreakable="true" locked="true"/>
+        <helmet material="leather helmet" team-color="true" unbreakable="true"/>
         <chestplate material="leather chestplate" team-color="true" unbreakable="true" locked="true"/>
         <leggings material="chainmail leggings" unbreakable="true" locked="true"/>
         <boots material="iron boots" team-color="true" unbreakable="true" locked="true"/>
@@ -121,7 +120,6 @@
     <tool>iron axe</tool>
     <tool>iron spade</tool>
     <tool>arrow</tool>
-    <tool>bucket</tool>
 </toolrepair>
 <itemremove>
     <item>leather helmet</item>
@@ -141,7 +139,9 @@
     <item>ender stone</item>
     <item>stone</item>
     <item>smooth brick</item>
-    <item>tnt</item>
+    <item>flint</item>
+    <item>gravel</item>
+    <item>clay</item>
 </itemremove>
 <itemkeep>
     <item>golden apple</item>
@@ -151,9 +151,6 @@
     <item material="golden apple"/>
     <item amount="24" material="wood"/>
 </kill-reward>
-<disabledamage>
-    <damage>block explosion</damage>
-</disabledamage>
 <hunger>
     <depletion>off</depletion>
 </hunger>
