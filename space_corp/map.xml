@@ -1,7 +1,7 @@
 <map proto="1.4.2">
 <name>Space Corp</name>
 <version>1.0</version>
-<objective>Destroy the enemy team's monument!</objective>
+<objective>Destroy the enemy team's emerald monument!</objective>
 <gamemode>dtm</gamemode>
 <created>2023-01-28</created>
 <maxbuildheight>25</maxbuildheight>
@@ -74,8 +74,8 @@
 </filters>
 <regions>
     <union id="spawn-areas">
-        <above x="71" id="red-spawn-area"/>
-        <below x="-58" id="blue-spawn-area"/>
+        <above x="75" id="red-spawn-area"/>
+        <below x="-62" id="blue-spawn-area"/>
         <below z="75" id="obs-spawn-area"/>
     </union>
     <apply block="never" region="spawn-areas" message="You may not modify spawns!"/>
