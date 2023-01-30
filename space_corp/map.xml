@@ -51,6 +51,8 @@
             <enchantment>efficiency</enchantment>
         </item>
         <item slot="5" amount="32" material="wood"/>
+        <item slot="6" amount="32" material="glass"/>
+        <item slot="7" material="bucket"/>
         <item slot="8" material="golden apple"/>
         <item slot="28" material="arrow"/>
         <helmet material="leather helmet" team-color="true" unbreakable="true"/>
@@ -142,6 +144,7 @@
     <item>flint</item>
     <item>gravel</item>
     <item>clay</item>
+    <item>clay ball</item>
 </itemremove>
 <itemkeep>
     <item>golden apple</item>
