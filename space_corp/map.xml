@@ -72,6 +72,12 @@
     </deny>
     <team id="only-blue">blue</team>
     <team id="only-red">red</team>
+    <deny id="deny-redstone">
+        <all>
+            <material>redstone wire</material>
+            <void/>
+        </all>
+    </deny>
 </filters>
 <regions>
     <union id="spawn-areas">
@@ -87,6 +93,7 @@
         <region id="spawn-areas"/>
     </negative>
     <apply block-place="deny-void" region="void-area" message="You may not build in the void!"/>
+    <apply block-break="deny-redstone"/>
     <union id="lanes">
         <complement> <!-- Blue side -->
             <rectangle min="8,142" max="-22,103"/>
