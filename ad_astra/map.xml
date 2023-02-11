@@ -46,13 +46,13 @@
         <item slot="2" material="iron pickaxe" enchantment="dig speed" unbreakable="true"/>
         <item slot="3" material="iron axe" enchantment="dig speed:2" unbreakable="true"/>
         <item slot="4" material="iron spade" enchantment="dig speed" unbreakable="true"/>
-        <item slot="5" material="wood" damage="1" amount="64"/>
+        <item slot="5" material="wood" amount="64"/>
         <item slot="6" material="glass" amount="32"/>
         <item slot="7" material="bucket"/>
         <item slot="8" material="golden apple"/>
         <item slot="28" material="arrow"/>
         <item slot="29" material="shears" unbreakable="true"/>
-        <item slot="32" material="wood" damage="1" amount="64"/>
+        <item slot="32" material="wood" amount="64"/>
         <helmet material="leather helmet" team-color="true" unbreakable="true"/>
         <chestplate material="leather chestplate" team-color="true" unbreakable="true"/>
         <leggings material="chainmail leggings" enchantment="protection projectile:2" unbreakable="true"/>
@@ -67,6 +67,16 @@
     <deny id="deny-players">
         <participating/>
     </deny>
+    <deny id="deny-web">
+        <all>
+            <any>
+                <material>web</material>
+                <material>77</material>
+                <material>143</material>
+            </any>
+            <void/>
+        </all>
+    </deny>
     <deny id="deny-red">
         <team id="only-red">red-team</team>
     </deny>
@@ -79,7 +89,10 @@
             <material>web</material>
         </any>
     </blocks>
-    <material id="only-iron">iron block</material>
+    <any id="allowed-spawn">
+        <material id="only-iron">iron block</material>
+        <material>stationary water</material>
+    </any>
     <material id="only-air">air</material>
     <time id="msg-waterlane">43m</time>
     <after id="water-lane-time" message="`9Water `9Lanes `fwill `fappear `fin {0}" duration="2m" filter="msg-waterlane"/>
@@ -115,7 +128,7 @@
         <region id="spawn-areas"/>
         <region id="water-lanes"/>
     </negative>
-    <apply block="deny-void" region="void-area" message="You may not edit the void!"/>
+    <apply block-place="deny-void" block-break="deny-web" region="void-area" message="You may not edit the void!"/>
     <apply block="deny-void" region="water-lanes" message="You may not edit the void!" filter="no-water-lanes"/>
     <cuboid id="obs-spawn" min="-3,26,-3" size="7,4,7"/>
     <apply block="never" region="obs-spawn" message="You may not modify the observer's spawn!"/>
@@ -128,7 +141,7 @@
         <mirror id="blue-spawn-area" region="red-spawn-area" origin="-113.5,0,-61.5" normal="0,0,1"/>
         <circle center="4.5,-61.5" radius="10.5"/>
     </union>
-    <apply block-place="deny-players" block-break="only-iron" region="spawn-areas" message="You may not modify spawn areas!"/>
+    <apply block-place="deny-players" block-break="allowed-spawn" region="spawn-areas" message="You may not modify spawn areas!"/>
     <apply enter="deny-blue" region="red-spawn-area" message="You may not enter your enemies' spawn!"/>
     <apply enter="deny-red" region="blue-spawn-area" message="You may not enter your enemies' spawn!"/>
     <union id="victory-areas">
