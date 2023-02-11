@@ -67,7 +67,7 @@
     <deny id="deny-players">
         <participating/>
     </deny>
-    <deny id="deny-web">
+    <deny id="deny-void-break">
         <all>
             <any>
                 <material>web</material>
@@ -128,7 +128,7 @@
         <region id="spawn-areas"/>
         <region id="water-lanes"/>
     </negative>
-    <apply block-place="deny-void" block-break="deny-web" region="void-area" message="You may not edit the void!"/>
+    <apply block-place="deny-void" block-break="deny-void-break" region="void-area" message="You may not edit the void!"/>
     <apply block="deny-void" region="water-lanes" message="You may not edit the void!" filter="no-water-lanes"/>
     <cuboid id="obs-spawn" min="-3,26,-3" size="7,4,7"/>
     <apply block="never" region="obs-spawn" message="You may not modify the observer's spawn!"/>
