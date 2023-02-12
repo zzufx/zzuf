@@ -19,14 +19,14 @@
 </teams>
 <spawns>
     <spawn team="red-team" kit="spawn-kit">
-        <region>
+        <regions>
             <point yaw="90">15.5,4,1.5</point>
-        </region>
+        </regions>
     </spawn>
     <spawn team="blue-team" kit="spawn-kit">
-        <region>
+        <regions>
             <point yaw="-90">-20.5,4,1.5</point>
-        </region>
+        </regions>
     </spawn>
     <default>
         <regions>
