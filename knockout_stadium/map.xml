@@ -9,8 +9,8 @@
     <author uuid="9d4779a8-d35f-45d2-b51c-95de7a77e128"/> <!-- zzuf -->
 </authors>
 <teams>
-    <team id="red-team" color="dark red" max="5">Red</team>
-    <team id="blue-team" color="blue" max="5">Blue</team>
+    <team id="red-team" color="dark red" max="20">Red</team>
+    <team id="blue-team" color="blue" max="20">Blue</team>
 </teams>
 <spawns>
     <spawn team="red-team" kit="spawn-kit" yaw="180">
