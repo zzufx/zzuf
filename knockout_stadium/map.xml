@@ -71,15 +71,13 @@
     <limit>200</limit>
 </score>
 <toolrepair>
+    <tool>stone sword</tool>
     <tool>stick</tool>
-    <tool>bow</tool>
 </toolrepair>
 <itemkeep>
     <item>golden apple</item>
-    <item>arrow</item>
 </itemkeep>
 <itemremove>
-    <item>stone sword</item>
     <item>leather helmet</item>
     <item>leather chestplate</item>
     <item>chainmail leggings</item>
@@ -87,7 +85,6 @@
 </itemremove>
 <kill-reward>
     <item material="golden apple"/>
-    <item amount="8" material="arrow"/>
 </kill-reward>
 <hunger>
     <depletion>off</depletion>
