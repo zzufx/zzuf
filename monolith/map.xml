@@ -75,6 +75,9 @@
     <deny id="deny-players">
         <participating/>
     </deny>
+    <deny id="deny-redstone-wire">
+        <material>redstone wire</material>
+    </deny>
 </filters>
 <regions>
     <negative id="void-area">
@@ -84,7 +87,7 @@
                 <rectangle min="-46,-95" max="47,-32"/> <!-- middle -->
                 <union id="jump-pad-ends">
                     <rectangle min="66,6" max="94,21"/> <!-- red side jump pad end -->
-                    <rectangle id="red-spawn-jump-pad-end" min="5,27" max="-4,13"/> <!-- red spawn jump pad end -->
+                    <rectangle id="red-spawn-jump-pad-end" min="-5,12" max="6,28"/> <!-- red spawn jump pad end -->
                     <rectangle min="-65,-133" max="-93,-148"/> <!-- blue side jump pad end -->
                     <mirror region="red-spawn-jump-pad-end" origin="${map-origin}" normal="0,0,1"/> <!-- blue spawn jump pad end -->
                 </union>
@@ -93,8 +96,8 @@
             <region id="jump-pad-ends"/>
         </union>
     </negative>
-    <apply block="never" region="void-area" message="You may not edit the void!"/>
-    <apply block="never" region="jump-pad-ends" message="You may not edit jump pad destinations!"/>
+    <apply block="never" block-physics="deny-redstone-wire" region="void-area" message="You may not edit the void!"/>
+    <apply block="never" block-physics="deny-redstone-wire" region="jump-pad-ends" message="You may not edit jump pad destinations!"/>
     <union id="spawn-areas">
         <rectangle id="red-spawn-area" min="-20,42" max="21,104"/>
         <mirror id="blue-spawn-area" region="red-spawn-area" origin="${map-origin}" normal="0,0,1"/>
