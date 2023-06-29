@@ -51,15 +51,16 @@
         <item slot="3" material="iron axe" unbreakable="true" enchantment="efficiency:2"/>
         <item slot="4" material="wood" damage="1" amount="64"/>
         <item slot="5" material="glass" amount="64"/>
-        <item slot="6" material="water bucket"/>
+        <item slot="6" material="smooth brick" amount="64"/>
+        <item slot="7" material="water bucket"/>
         <item slot="8" material="golden apple"/>
         <item slot="28" material="arrow"/>
         <item slot="29" material="iron spade" unbreakable="true"/>
         <item slot="30" material="redstone" amount="64"/>
-        <item slot="31" material="spruce fence" amount="64"/>
-        <item slot="32" material="step" amount="64"/>
-        <item slot="33" material="ladder" amount="64"/>
-        <item slot="34" material="water bucket"/>
+        <item slot="31" material="wood" damage="1" amount="64"/>
+        <item slot="32" material="spruce fence" amount="64"/>
+        <item slot="33" material="step" amount="64"/>
+        <item slot="34" material="ladder" amount="64"/>
         <item slot="35" material="water bucket"/>
         <helmet material="leather helmet" team-color="true" unbreakable="true" enchantment="protection explosions:1"/>
         <chestplate material="leather chestplate" team-color="true" unbreakable="true" enchantment="protection explosions:1"/>
@@ -141,12 +142,12 @@
     <apply velocity="-1.4,1.8,1.4" kit="yeeted" region="blue-side"/>
 </regions>
 <cores material="obsidian" leak="4">
-    <core team="red-team" region="red-core" name="Red Core"/>
-    <core team="blue-team" region="blue-core" name="Blue Core"/>
+    <core team="red-team" region="red-core" name="Red Tower Core"/>
+    <core team="blue-team" region="blue-core" name="Blue Tower Core"/>
 </cores>
 <destroyables material="emerald block" completion="100%">
-    <destroyable owner="red-team" region="red-mon" name="Red Monument"/>
-    <destroyable owner="blue-team" region="blue-mon" name="Blue Monument"/>
+    <destroyable owner="red-team" region="red-mon" name="Red Statue Monument"/>
+    <destroyable owner="blue-team" region="blue-mon" name="Blue Statue Monument"/>
 </destroyables>
 <renewables>
     <renewable region="spawn-areas" renew-filter="only-iron"/>
